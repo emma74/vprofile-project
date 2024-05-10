@@ -3,6 +3,7 @@ LABEL "Project"="Vprofile"
 LABEL "Author"="Emmanuel A"
 RUN apt update && apt install maven -y
 RUN git clone https://github.com/devopshydclub/vprofile-project.git
+#ADD../../
 RUN cd vprofile-project && git checkout docker && mvn install
 
 FROM tomcat:9.0-jdk11-temurin-jammy
